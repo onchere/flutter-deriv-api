@@ -18,7 +18,7 @@ abstract class GetFinancialAssessmentResponseModel {
   });
 
   /// Client's financial assessment details
-  final Map<String, String>? getFinancialAssessment;
+  final Map<String, dynamic>? getFinancialAssessment;
 }
 
 /// Get financial assessment response class.
@@ -36,10 +36,11 @@ class GetFinancialAssessmentResponse
       GetFinancialAssessmentResponse(
         getFinancialAssessment: getFinancialAssessmentJson == null
             ? null
-            : Map<String, String>.fromEntries(getFinancialAssessmentJson.entries
-                .map<MapEntry<String, String>>(
+            : Map<String, dynamic>.fromEntries(getFinancialAssessmentJson
+                .entries
+                .map<MapEntry<String, dynamic>>(
                     (MapEntry<String, dynamic> entry) =>
-                        MapEntry<String, String>(entry.key, entry.value))),
+                        MapEntry<String, dynamic>(entry.key, entry.value))),
       );
 
   /// Converts an instance to JSON.
@@ -76,7 +77,7 @@ class GetFinancialAssessmentResponse
 
   /// Creates a copy of instance with given parameters.
   GetFinancialAssessmentResponse copyWith({
-    Map<String, String>? getFinancialAssessment,
+    Map<String, dynamic>? getFinancialAssessment,
   }) =>
       GetFinancialAssessmentResponse(
         getFinancialAssessment:
