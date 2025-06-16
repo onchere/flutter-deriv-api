@@ -27,48 +27,17 @@ void main() {
           final FinancialAssessmentQuestions? faQuestions =
               financialAssessmentQuestions.financialAssessmentQuestions;
 
-          // expect(
-          //   faQuestions?.questions?['account_turnover'],
-          //   const QuestionsProperty(
-          //     answers: [
-          //       AnswersItem(
-          //         hideIf: [],
-          //         key: 'less_than_25000',
-          //         value: 'Less than \$25,000',
-          //       ),
-          //     ],
-          //     hideIf: [],
-          //     question: 'Anticipated annual turnover',
-          //     type: TypeEnum.singleChoice,
-          //   ),
-          // );
-          // expect(
-          //   faQuestions?.questions?['education_level'],
-          //   const QuestionsProperty(
-          //     answers: [
-          //       AnswersItem(
-          //           hideIf: [],
-          //           key: 'primary',
-          //           value: 'Primary',
-          //           nextNode: 'net_income'),
-          //     ],
-          //     hideIf: [],
-          //     question: 'Education level',
-          //     type: TypeEnum.singleChoice,
-          //   ),
-          // );
-
           expect(
             faQuestions?.questions?['account_turnover'],
             const QuestionsProperty(
-              answers: [
+              answers: <AnswersItem>[
                 AnswersItem(
-                  hideIf: [],
+                  hideIf: <String>[],
                   key: 'less_than_25000',
                   value: 'Less than \$25,000',
                 ),
               ],
-              hideIf: [],
+              hideIf: <String>[],
               question: 'Anticipated annual turnover',
               type: TypeEnum.singleChoice,
             ),
@@ -77,15 +46,15 @@ void main() {
           expect(
             faQuestions?.questions?['education_level'],
             const QuestionsProperty(
-              answers: [
+              answers: <AnswersItem>[
                 AnswersItem(
-                  hideIf: [],
+                  hideIf: <String>[],
                   key: 'primary',
                   value: 'Primary',
                   nextNode: 'net_income',
                 ),
               ],
-              hideIf: [],
+              hideIf: <String>[],
               question: 'Education level',
               type: TypeEnum.singleChoice,
             ),
@@ -94,15 +63,15 @@ void main() {
           expect(
             faQuestions?.questions?['employment_industry'],
             const QuestionsProperty(
-              answers: [
+              answers: <AnswersItem>[
                 AnswersItem(
-                  hideIf: [],
+                  hideIf: <String>[],
                   key: 'construction',
                   value: 'Construction',
                   nextNode: 'occupation',
                 ),
               ],
-              hideIf: [],
+              hideIf: <String>[],
               question: 'Industry of employment',
               type: TypeEnum.singleChoice,
             ),
@@ -111,15 +80,15 @@ void main() {
           expect(
             faQuestions?.questions?['employment_status'],
             const QuestionsProperty(
-              answers: [
+              answers: <AnswersItem>[
                 AnswersItem(
-                  hideIf: [],
+                  hideIf: <String>[],
                   key: 'employed',
                   value: 'Employed',
                   nextNode: 'employment_industry',
                 ),
               ],
-              hideIf: [],
+              hideIf: <String>[],
               question: 'Employment status',
               type: TypeEnum.singleChoice,
             ),
@@ -128,15 +97,15 @@ void main() {
           expect(
             faQuestions?.questions?['estimated_worth'],
             const QuestionsProperty(
-              answers: [
+              answers: <AnswersItem>[
                 AnswersItem(
-                  hideIf: [],
+                  hideIf: <String>[],
                   key: 'less_than_100000',
                   value: 'Less than \$100,000',
                   nextNode: 'account_turnover',
                 ),
               ],
-              hideIf: [],
+              hideIf: <String>[],
               question: 'Estimated net worth',
               type: TypeEnum.singleChoice,
             ),
@@ -145,15 +114,15 @@ void main() {
           expect(
             faQuestions?.questions?['income_source'],
             const QuestionsProperty(
-              answers: [
+              answers: <AnswersItem>[
                 AnswersItem(
-                  hideIf: [],
+                  hideIf: <String>[],
                   key: 'salaried_employee',
                   value: 'Salaried Employee',
                   nextNode: 'source_of_wealth',
                 ),
               ],
-              hideIf: [],
+              hideIf: <String>[],
               question: 'Source of income',
               type: TypeEnum.singleChoice,
             ),
@@ -162,15 +131,15 @@ void main() {
           expect(
             faQuestions?.questions?['net_income'],
             const QuestionsProperty(
-              answers: [
+              answers: <AnswersItem>[
                 AnswersItem(
-                  hideIf: [],
+                  hideIf: <String>[],
                   key: 'less_than_25000',
                   value: 'Less than \$25,000',
                   nextNode: 'estimated_worth',
                 ),
               ],
-              hideIf: [],
+              hideIf: <String>[],
               question: 'Net annual income',
               type: TypeEnum.singleChoice,
             ),
@@ -179,15 +148,15 @@ void main() {
           expect(
             faQuestions?.questions?['occupation'],
             const QuestionsProperty(
-              answers: [
+              answers: <AnswersItem>[
                 AnswersItem(
-                  hideIf: [],
+                  hideIf: <String>[],
                   key: 'chief_executives',
                   value: 'Chief Executives, Senior Officials and Legislators',
                   nextNode: 'income_source',
                 ),
               ],
-              hideIf: [],
+              hideIf: <String>[],
               question: 'Occupation',
               type: TypeEnum.singleChoice,
             ),
@@ -196,15 +165,15 @@ void main() {
           expect(
             faQuestions?.questions?['source_of_wealth'],
             const QuestionsProperty(
-              answers: [
+              answers: <AnswersItem>[
                 AnswersItem(
-                  hideIf: [],
+                  hideIf: <String>[],
                   key: 'income_savings',
                   value: 'Accumulation of Income/Savings',
                   nextNode: 'education_level',
                 ),
               ],
-              hideIf: [],
+              hideIf: <String>[],
               question: 'Source of Wealth',
               type: TypeEnum.singleChoice,
             ),
